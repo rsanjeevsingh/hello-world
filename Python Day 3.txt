@@ -1,0 +1,241 @@
+============ Day 3 ==============
+
+Access speicifier - by default public by nature..
+
+To add default values in methods...
+
+def __int__(self,x=0,y=0):
+	self.a=x
+	self.b=y
+	self.y=0
+
+
+Static member will always have the last updated value... as it is single repsresentaion fo the entire class..
+
+class wipro:
+	res=0
+	def __init__(self,x=0,y=0):
+		self.a=x;self.b=y;
+	def calc(self)
+		res=self.x+self.y
+ob1=wipro(1,2)
+ob1.calc()
+ob1.wipro()
+
+
+We can also pass Keyword values object is getting initilaized
+
+ob2=wipro(y=3,x=4)
+ob3=wipro(y=3)
+
+
+Constructor & Destructors as special methods..
+
+> Bounded and Unbounded
+	Bounded methods are associated with object...
+	Unbounded mehtods are associated without object...
+
+
+There are two builtin functions classmethod() and staticmethod() which are used to typecast a funciton into a method
+This conversion will be done only after the definitions of all functions as methods inside class. Both functions take on parameter and use for typecasting..
+KeyboardInterrupt
+
+#classmethodhandle = classmethod(functionhandle)
+#staticmethodhandle = staticmethod(functionhandle)
+
+Classic Style:
+
+class sample:
+	def First(self):
+		print 'Class method'
+	def Second()
+		print 'Static method'
+	First=classmethod(First)
+	Second=staticmethod(Second)
+
+Sample.Second() #Output - Static method
+
+
+Decorators are special tools which are used to do type casting or define dynamic funcitons in python.
+Two decorators are used for function to method conversion.
+
+"@" is used to specify the decorator as @classmethod and @staticmethod whic is used just before the defition of the function as method inside class
+
+
+class sample:
+	@classmethod
+	def First(Self):
+		print 'Class method'
+	@staticmethod
+	def Second():
+		print 'I am static method'
+
+
+Inhertiance: It is a mechanism in OOP which is used ot extend the members of one class to another calss. The calss which extends its members is callsed Base Class/Parent Class/Super class and the class which receives this mmbers is called Derived class/Child Class/Sub class.
+
+Inheritance provides clarity and high reusablity of code..
+
+ABstract classes are always in top of hierachy
+
+Gereralization and Specilization
+
+Generalization -- MOve up the hierachy in Class
+Specialization -- Move down the hierachy in Class
+
+Types of Inheritance:
+	1. SIngel
+	2. Muti Leve
+	3. Multipe
+	4. Hierachy
+	5. Hybrid
+
+Upcasting: Create object for below class.. and can access objects of top most class..
+
+
+
+class Base:
+	def calcBase(self):
+		print
+	def dispBase(self):
+		print
+class Derived:
+	def calcBaseD(self):
+		print
+	def dispBaseD(self):
+		print
+
+ob=Derived()
+ob.calcBaseD()
+ob.dispBaseD()
+
+ob.calcBase() #Error Because no conection bewteeen base n derived
+
+@classmethod
+class Base:
+	def calcBase(self):
+		print
+	def dispBase(self):
+		print
+@classmethod
+class Derived(Base):
+	def calcBaseD(self):
+		print
+	def dispBaseD(self):
+		print
+
+ob=Derived()
+ob.calcBaseD()
+ob.dispBaseD()
+
+
+Diamond Problem: 
+		Class 1
+	class 2		class 3
+		class 4
+
+Class 4 can access methods n funcitons of class 1 via class 2 or class 3 . This is diamond problem
+
+MRO - Method Resolution Order - Avoids Diamond Problem
+
+
+Mehtod Overriding
+
+class wiproltd:
+    def display1(self):
+        print 'Display parent'
+
+class wiprodop(wiproltd):
+    def display1(self):
+        print 'Display child'
+
+ob=wiprodop()
+ob.display1()
+
+Since overriding will hide the members of the paresnt calss and execute the members of child class,we can implmeent the overriden members using builtin function callsed super
+
+super function can be used to implement both overriden constructor and method
+
+
+super(classname,object).methodname()
+
+
+The new style classes will have the top most calss in teh calss hierachy of the inherited scneario to be inherited with object class
+
+if the top most of the inherited calsses is a standalone class then such type of implementaion is callsed calssi csyl classes / calssic style class definition.
+
+	|''''''	A'''''''|
+	B		C
+	|------	D-------|
+
+if classic style - python uses DFS algoritm - path: D -> B -> A
+	if member near to root node use DFS
+if new style - python uses BFS algorithm - path: D -> B -> C -> A
+	if member near branch node use BFS
+
+
+Use super class in constructor method overloading..
+
+classic style example - DFS Algorithm:
+
+class first:
+	c_m=10
+class second(first):
+	pass
+class third(first):
+	c_m=20
+class fourth(second,thrid):
+	pass
+
+ob=fourth()
+print ob.c_m
+ouptut: 10
+
+new style - BFS Algorithm:
+
+Program: class9.py
+
+class first(object):
+	c_m:10
+class second(first):
+	pass
+class third(first):
+	c_m:20
+class fourth(second,thrid)
+	pass
+
+ob=fourth()
+print ob.c_m
+output: 20
+
+
+class Wiproltd(object):
+    @classmethod
+    def display1(self):
+        print 'Display paresnt'
+
+class Wiprodop(Wiproltd):
+    @classmethod
+    def display1(self):
+        super(wiprodop,self).display1()
+        print 'Display child'
+
+ob=wiprodop()
+ob.display1()
+print Wiprodop.__mro__ #Works in new style - Gives the travese path
+
+	|""""">	A <""""" |
+|""""">	B <""""| |"""""""" >C <"""" |
+D		E		F----
+^		^		^
+|<____  z   ___>G <___ Y _______|
+
+        ^------ i ------^
+
+Single Element in a Tuple : a=(10,)
+if declared as a=(10) then python takes a as interger..
+
+
+arange vs range
+
+arange - you can also give float values
+range - you can give you only integer values

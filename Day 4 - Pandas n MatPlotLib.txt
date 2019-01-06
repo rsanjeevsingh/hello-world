@@ -1,0 +1,34 @@
+Pandas are extension on NumPy...
+
+2 Components :
+	> Pandas Series: 1D labelled array, capable of holding any data type
+		x = pd.Series([10,20,30,40,50],dtype=int/float)
+	> Pandas Dataframes : 2D labelled DS with columns of heterogeneous data types
+
+
+To get data sets: 	data.gov.in
+			nseindia
+Can get nse data	quandl.com
+			kaggle.com
+			
+
+Have one word file name... not recommmed to have spaces in it
+
+Column Heaing should contain only 1 word... i.e. No spaces...
+
+1. Data Preparation:
+	Fix anamolies
+
+	Make a note if you have missing data
+
+	if missing data - can I put zero or blank... do not put zero..depends on dataset
+	take a mean of immediate previous or immediate next...
+	Take either the previous immediate or immediate next value..
+
+	Can use "mode" for categorical data.. 
+
+
+
+MatPlotLib:
+	Core PyPlot
+

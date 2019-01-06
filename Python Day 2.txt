@@ -1,0 +1,311 @@
+==================== Day 2 =======================
+Tuple Data Structure  - Like a list having read only property.
+More faster than list... as elements are freezed i.e. Immutable Object.
+Freezed memory locations... not dynamic and extensible.. can have heterogenous values
+Methods - index() and count()
+tuplelabel=(val1,val2,... valn)
+
+#Create List
+l1=[10,20,30,40,50] #1 - normal way
+l2=list([100,200,300,400,500]) #2 - list constructor l2=list([va1,va2..])
+l3=list() #3 - Empty list
+
+#Create Tuple
+t1=(10,20,30,40,50)
+t2=tuple((100,200,300,400,500))
+t3=tuple() #3 -Empty tuple - can't make changes
+
+Dictionary - It's a DS which is unordered and mutuable having dynamic and extensible memory allocatoin with heterogenous storage which always have pair of representation.
+Properties:
+	1. Dictionary is defined using key n value pair..
+	2. Dictionary keys (DK) are unique by nature
+	3. DK will always have value and cannot be empty
+	4. DK can be anything but string and integer is recommened
+	5. D values can be anything and any object type representation
+	6. D are unordered which means the insertion order is not preserved.
+	7. DK are like indexes used to access the offset position value.
+	8. Dropping keys will drop the associated values
+	9. DK  are case sentive and recommended to be single word.
+
+dictLable = {Key1:Value1,Key2:Value2,...}
+
+a={'x':100,'y':200,'z':300}
+{'y': 200, 'x': 100, 'z': 300}
+print a['x']
+
+Methods : keys(), values()
+
+insert into exisitng dictionary  >>> a['key']='Value'
+
+
+Functions -- Set of statements which are defined for some intended purpose that could be used anywhere in program
+
+3 types : 	1. Builtin Functions
+		2. User defined functions
+		3. Anonymous functions
+
+
+2 components of functions	 a) Function body
+				 b) Funtionc call
+
+In python funciton body / definition should be always done first beofre the call.
+Functions can be deined using a keyword called 'def'
+
+
+User defined fuctions
+
+def sample():
+	print 'It's a function..'
+ 
+
+Scope: Scope is the availability of a value/member.
+3 types Scopes: a) Local Scope - within block
+		b) Global Scope - within main
+		c) External Scope - outside main
+Program: fun002.py
+
+Globals, Locals are two builtin functions which returns a dictionary object having the members and its associated values which are present in gloabl scope and local scope.
+Used mostly with functions defined.
+PRogram: fun00001.py     
+
+Passing Parameters to functions:
+PP is a mechanism to provide the necessary values before hand before execution.
+
+3 styles: 	a)Statis Pass
+		b) Dynamic pass
+		c) expression pass
+
+When the values has been passes as parameters, it needs to be received as arguments in funciton block
+Guidelines while passing parameters:
+	1. No. of parameters passed, is the number of argumnets defined to recieve it
+	2. Sequence of Parameters passed, is the sequence of the arguments defined to recive ti
+	3. Return type should will also follow the same as parameters mentioned.
+
+def sample(x,y,z):
+	print x,y,z
+sample(1,2,3) #Static Pass
+a,b,c=1,'wipro',3
+sample(a,b,c) #Dynamic Pass
+sample(a+a,b+b,c+c) #Expression Pass
+
+global is keyword which is used to access global members from any function
+provided that member should be in main
+
+Eg: def fun():
+	a=100
+	def fun2():
+		global a
+		print "Inside - ", a
+	print "Inside fun - ",a
+	Second()
+
+Program fun5.py
+Return Variables def fun(x,y):
+			x=20,y=10
+	x=10;y=20
+	x,y=fun(x,y)
+
+
+Default values are reserved values which are used to define standby values if the appropirate parameters are not passed.
+
+def sample(x=0,y=0,z=0)
+    print x,y,z
+>>> sample()
+    0 0 0
+>>> sample(10)
+    10 0 0 
+
+def sample(x,y=0,z=0)
+	print x.y,z
+#Above x is manadatory paramter and it shoudl be first in arguments
+
+Exclusive reference:
+	def sample(*x)
+		print x #x is tuple object
+>>> sample() O/p: ()
+>>> sample(19,1,2) o/p: (19,1,2)
+
+Python suggest: def sample(*args)
+			print args
+
+Keyword Argument is a technique in python which is used to initilize a specific argument in the defined list
+sample(y=10)
+
+Anonymous Function: are those which are having no names but code replacement. This is helpful when there is a functionality with single line and repeated execution
+
+label=lambda signature:expression
+
+res = lambda x,y:x+y #Anonymous Function
+print "Executing the main block functions"
+a=10
+b=20
+z=res(a,b)
+print z, type(res)
+
+Modules - Extensions for functions which are used to provide functionalities across the programs..
+Secure source code by creating a non human readble representation on as python byte code (PBC)
+
+The functionalities which are written can be included into any other program using "import" keyword
+
+>>> help('modules')
+2 Types of Modules in Python
+Each module contains two members : Function definitions and Data Members
+	1) Built In Module
+		a) Integrated with Interpreter
+		b) Python Community - Software Repository (pypi.org)
+		c) Thrid Party Modules	
+	2) User defined Module
+
+3 Styles of Import Statements:
+
+	a) import math, mod2, mod3,... mod n
+>>>			math.sqrt(10)
+		import math as m1
+>>>			m1.sqrt(10)
+	b) from mod1 import *
+		All functions come as localised functions
+>>> 			sqrt(10)
+	c) from mod1 import spec1, spec2,... spec n
+ 		
+
+Module search path - Python looks for modules in the default path
+
+from sys import path
+print path #List variables
+
+If module stored in another folder...
+you need to set path 
+
+to set path you can use environment variable or sys.path
+
+This PC > Properties > Adv Sys Settings > Envi Vairables >User varibles > "PYTHONPATH"
+
+PYTHONPATH is environment variables to set given user defined modules search path..
+
+
+YOu can also set path from module itself
+from sys import path
+path.insert(1,'D:\\MyModules')
+
+Packages - are extensions to modules which are used to organize/manage the modules better
+a) built-in packages
+b) user defined packages
+
+2 compomnents of package
+	a) Package body
+	b) Package use - Includes package and consume the members inside it
+Package body contains only two members
+	a) MOdules Files
+	b) Package Constructor File
+
+a) Create a folder with good naming convention which will be root of the package.
+b) Get into the folder and start adding the module files.
+*c) Create another file in the folder with nam __init__.py which is a package constructor file
+d) Edit this file and add the necessary import statement to include all the modules in current folder
+e) Repeat step a-d if you require subpackages
+f) Comeout of the root folder and create package use file to consume the package body with the import statement and use fully qualified naming convention to access the members
+g) Execute the use file which inturn will compile the package and create .pyc file
+h) Move out the source file for future update and retain only .pyc file in the folder.
+
+
+in __init__ file write import statements.. import 
+if left blank, declare "import SamplePack.trigmod as sp" is packuse.py file
+
+
+Document Quotes: ''' this is a document quote
+
+''' single line '''
+""" 
+multiline
+"""
+
+>>> mathmod.add.__doc__ # To display only comments
+
+
+
+Class:
+Classic Style
+	class Sample:
+		pass
+In Python, class is container which has following members in it
+1. Class Variables/data members/field of the object/attributes of the object
+2. Statis "
+3. Class Methods/non static methods/member funciton
+4. Static Methods
+5. Special Methods
+6. Speicla Members
+
+2 types of class definition in python
+	a) Classic Style classes
+	b) New style classes
+
+New Style
+class Sample():
+	pass
+
+
+ob = Sample()
+
+
+Access static variable through Class name and class variable through objects
+IT's not recommended to access static variable through object
+
+Any variable defined in class is Static Variable
+
+In python, everything is explicit
+
+Constructors: Special Method. Allocates memory and initialize values
+It constructs the object.
+
+Class varibales are not part of Class, they are part of objects.
+
+We can create Unstructed objects in Python
+class Sample:
+	pass
+
+ob1=Sample()
+ob1.a=10 #creates unstructed object
+
+Method implemented using object it is Class method..
+Class method should have atleast one argument.
+
+class Sample():
+	def fun(x):
+		print "address:" x
+
+ob1=Sample()
+ob1.fun()
+
+
+Standard way to write class method
+
+	class Sample():
+	def fun(self):		#self - similar to this
+		print "address:" x
+
+ob1=Sample()
+ob1.fun()
+
+
+
+Class constructor : def __init__
+
+class Sample():
+	#below code will create same structure
+	def __init__(self,x,y):
+		self.no1=x
+		self.no2=y 
+	def display(self):
+		print self.no1, self.no2
+ob1=Sample(10,20)
+
+
+
+class Sample():
+	def __init__(self):
+		print 'Object instandtiated' 
+	def display(self):
+		print 'display'
+	def __del__(self):
+		print 'Object destructed'
+

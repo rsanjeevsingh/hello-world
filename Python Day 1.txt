@@ -1,0 +1,95 @@
+Python Book - https://topgear-app.wipro.com/community/2411/study-materials
+Top Gear > Embedded and Programming > Python
+
+PyPI - Python Package Index
+Python APIs - https://pypi.org/
+
+Set permanent path - enviroment variable
+Set temporary path - path=%path%;c:\Python27;
+
+python.org > PyPI - Heart of Python - APIs HUB - Software Repo - By Python Community (Recommended) and 3rd Parties (Risk)
+
+To use PyPI APIs we need PIP (Package Management Tool)
+
+docs.python.org
+
+">>>" called as Python Prompt
+
+Language: Language is a communication media.
+
+Python Character
+	1. Numbers 0 - 9
+	2. String a-ZA-Z
+	3. Special Symbols !@#$%^...
+
+Python Keywords: Reserved Words intended to do specific task (only30)
+		help('keywords')
+Python Statements: Statements are instructions represented as expressions. 
+			Two Types	1. Simple Statement
+					2. Compound Statement
+
+Python PEP - Python Enhancement Proposals 
+		python.org > Documentation > Meta-PEP > 8 Style Guide for Python Code
+
+Variables : Reserved memory locations which are intended to store some value in it.
+		a) Implicit : Implicit variables are those which are defined and used. The type specification is understood by the system based on the value associated to it.
+			a=10, b='wipro'
+		b) Explicit : are those which are decalred, defined and used. The type specification is understood by the system based on programmer declaration.
+Most of scriipting langague they go with Implicit variables
+Most of the hight level lang -  explicit
+
+Data Type - Provides type specification for the reserved memory location.
+
+In python we call variables as Labels
+a=10 (Read as - a references to 10)
+
+Type #Displays type of label
+id() #Returns numeric address of the given reference
+
+#Comment - Descriptive statements
+		1. Program Comments / Script Comments - Starting of Code - Overview of code
+			a. Title of the Program
+			b. Author of the Program
+			c. Version of the Program
+			d. Date and Time of the Program
+			e. Desciription/Summary - 5 to 10 lines max
+		2. Code Comments
+
+Print Styles - 3 Types
+
+__main__ : Named Space - Declarative region - Called as under under main under main
+
+C Program
+#include<stdio.h> #Preprocess_Statements
+int main() {	#__main__
+}
+
+int main: #Give : to define new block
+	print("a")
+return 0
+
+Control Statements: Controls the flow of execution
+Two types:	a. Conditonal Control Statements - if
+		b. Loop Control Statements - while and for
+For loops mostly for Data Structure
+While loops for generic
+
+Data Structure: DS is a mechanism to provide layout for data storage and retrival which is easier and faster
+
+Array : It is simplest data structure which is used to stroe multiple values under a single identifier
+Properties:	1. Homogeneous
+		2. Sequential
+		3. Static with size
+
+
+DS in Python : List, Tuple, Dictionary
+
+List: Core DS in Python which is ordered and mutable having dynamic and extensible memory allocation with hetrogeneous storage type.
+Ordered - Insertion order is preserved
+Extensible - Grow or Shrink memory size
+
+List elements are access using index from 0 to n-1 where n is the length of list.
+
+label=[val1, val2,..., val n]
+In Python - Everything is at RUntime
+

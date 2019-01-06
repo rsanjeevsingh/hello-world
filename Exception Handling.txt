@@ -1,0 +1,38 @@
+What is it, why is it n how it is?
+
+Errors are events which are triggered during the execution of the program which are unexcepted and abnoraml by nature
+
+Exceptions are mechanism to deal with errors
+
+Errors are categorized to three type
+
+	a)Runtime Errors
+	b)Complie Error
+	c)Logical Errors
+
+Compile time errors are those which are triggered during the compilation of the program.
+Error occured due to Bad Syntax
+How to fix - Know the language correctly..
+
+Run time - Triggered during the exection of program..
+How to fix - defining test cases
+
+Logical Errors - Errors are triggered during execution of the prgram which is not seens and hidden..
+Triggered due to Bad lOgic / incorrect
+
+Logical errors are fixed by defining appropirate use cases (Funcitonal Testing)
+
+In python we deal with run time errors using exception handlers
+
+THe follwoing are the guidelines for the exception handling
+
+Define only those exceptions which are possible / tentative in the program..
+Define most likely exception at the top and less likely exception at the bottom..
+Define the exception object to handle the default message..
+Define non technical and simple english message for error description
+Define default exceptions at the end, to handle all the undefined exceptions..
+Define exceptions are nesed to group better... or to provide code clarity...
+Define common type of exception as group
+Define the program closure statements along with exception handler to take to program closure requirements
+
+Python defines try n except block to deal with exceptions.

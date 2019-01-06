@@ -1,0 +1,102 @@
+1. Data Preparation  - Fixing of Anamolies
+	Data Architects -> Key role - how to make data readily usable..
+2. Computation of Data -
+3. Visulalization 
+
+Jupyter is an open source web interface for Python used in Analytics n Data Visualization
+(jupyter.org)
+
+pip - used to manage the software extensions (modules n packages) in python
+Command Prompt > cd Python27> cd Scripts>pip --help
+
+If asked for upgrade..
+
+C:\Python27\Script > ..\python -m pip install --upgrade pip
+
+	Install Jupyter - pip install jupyter
+	Install numpy - pip install numpy
+
+NumPy (numerical python) is a numerical package for python to perform analytical funcitonalities
+(numpy.org)
+pip list 
+>>> to check 
+
+Pandas are extension to numpy which are more powerful 2D array representation.
+pandas.pydata.org
+	Install Pandas - pip install pandas
+
+Matplotlib is visualization packages
+	Install matplotlib - pip install matplotlib
+
+set path if unable to launch jupyter notebook
+
+path=%path%;C:\Python27;C:\Python27\Scripts;C:\Python27\include;C:\Python27\Lib;C:\Python27\libs;C:\Python27\DLLs;C:\Python27\etc
+
+TO launch jupyter notebook: jupyter notebook
+
+Type: <type 'numpy.ndarray'> #nd stand for n dimensional
+
+
+Kernel is a core of jupyter software that creates a interface between python n jupyter browser
+
+BY Defualt - Jupyter auto saves in 5 minutes
+
+
+.ipynb - i python notebook extension
+
+New > Python2 (To launch notebook)
+
+
+docs.scipy.org/doc/numpy/reference/index.html
+
+
+Ctrl + Enter - Allow you to execute the cell, and give you the result
+Alt + Enter - Executed current cell, and added new cell
+
+
+Array index starts with 0
+
+	10	20	30
+	40	50	60
+	70	80	90
+
+Shape: 3L X 3L
+
+to access 90, x[2][2]
+
+z[[0,2]] => Gets only 1st and last row
+50 in y => checks whether 50 exist in y matrix - Returns true or false
+
+
+Element TYpe - dtype
+Overall Type = object type
+
+Broadcasting - Similar to multiplication
+
+#Array Traversing
+x=np.array(range(10,100,10))
+print x
+y=x.reshape(3,3)
+print y
+print y[1,2]
+
+
+
+print x[[1,2]]
+print '\nSlice Array from index x[1:] till end: \n',y[1:]
+print 'Items in second column',y[...,1]
+print 'items in second row',y[1,...]
+print 'items in second row',y[1]
+print 'items in second till last row\n',y[1:,...]
+print 'items found in column 1 onwards are \n', y[...,1:]
+
+
+Boolean Indexing : Mechanism in NumPy Retreive value elements on array based on element indexes
+Converts into single dimension array
+
+
+
+** Data Science from Scratch... - before going to AI and ML Session
+** Python for Data Analysis...  - Consists on Numpy, Pandas, Matplotlib
+
+pandas.pydata.org/pandas-docs/stable/
