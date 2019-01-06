@@ -1,4 +1,8 @@
+''' Documentation COmment '''
 def addition(x,y):
+    '''
+    add()
+    THis funciton gives sum of two numbers'''
     return x+y
 
 def subtraction(x,y):
